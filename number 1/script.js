@@ -7,8 +7,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     .then(json => {
         for ( let post of json) { // Цикл перебирает данные для каждого поста
             postContent += `<div class='post'>
-                <h2>${post.title}</h2>
-                <div>${post.body}</div>
+                <h2>Заголовок: ${post.title}</h2>
+                <div>Статья: ${post.body}</div>
                 </div>`;
         }
         container.innerHTML = postContent; //Добавляю html-разметку в нужный элемент
